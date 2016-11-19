@@ -5,30 +5,30 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>Assert.IsFalse</Title>
-      <Shortcut>af</Shortcut>
-      <Description>Code snippet for an Assert.IsFalse().</Description>
+      <Title>return View</Title>
+      <Shortcut>rvm</Shortcut>
+      <Description>Code snippet for return View().</Description>
     </Header>
     <Snippet>
       <Imports>
         <Import>
-          <Namespace>Microsoft.VisualStudio.TestTools.UnitTesting</Namespace>
+          <Namespace>System.Web.Mvc</Namespace>
         </Import>
       </Imports>
       <References>
         <Reference>
-          <Assembly>Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</Assembly>
+          <Assembly>System.Web.Mvc.dll</Assembly>
         </Reference>
-      </References>
+      </References>    
       <Declarations>
         <Literal>
-          <ID>condition</ID>
-          <ToolTip>Replace with the name of the condition to test against</ToolTip>
-          <Default>condition</Default>
+          <ID>model</ID>
+          <ToolTip>Replace with the name of the model to pass to the view</ToolTip>
+          <Default>model</Default>
         </Literal>
-      </Declarations>      
+      </Declarations>  
       <Code Language="csharp">
-      <![CDATA[Assert.IsFalse($condition$);$end$]]>
+      <![CDATA[return View($model$);$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>

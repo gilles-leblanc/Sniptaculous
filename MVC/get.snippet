@@ -5,30 +5,34 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>Assert.IsFalse</Title>
-      <Shortcut>af</Shortcut>
-      <Description>Code snippet for an Assert.IsFalse().</Description>
+      <Title>MVC Get Action</Title>
+      <Shortcut>aget</Shortcut>
+      <Description>Code snippet for an HttpGet action.</Description>
     </Header>
     <Snippet>
       <Imports>
         <Import>
-          <Namespace>Microsoft.VisualStudio.TestTools.UnitTesting</Namespace>
+          <Namespace>System.Web.Mvc</Namespace>
         </Import>
       </Imports>
       <References>
         <Reference>
-          <Assembly>Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</Assembly>
+          <Assembly>System.Web.Mvc.dll</Assembly>
         </Reference>
-      </References>
+      </References>    
       <Declarations>
         <Literal>
-          <ID>condition</ID>
-          <ToolTip>Replace with the name of the condition to test against</ToolTip>
-          <Default>condition</Default>
+          <ID>methodName</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>methodName</Default>
         </Literal>
-      </Declarations>      
+      </Declarations>  
       <Code Language="csharp">
-      <![CDATA[Assert.IsFalse($condition$);$end$]]>
+      <![CDATA[public ActionResult $methodName$()
+        {
+            $end$
+            return View();
+        }]]>
       </Code>
     </Snippet>
   </CodeSnippet>

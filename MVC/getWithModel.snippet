@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>MVC Get Action</Title>
+      <Shortcut>agetm</Shortcut>
+      <Description>Code snippet for an HttpGet action.</Description>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Web.Mvc</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>System.Web.Mvc.dll</Assembly>
+        </Reference>
+      </References>    
+      <Declarations>
+        <Literal>
+          <ID>methodName</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>methodName</Default>
+        </Literal>
+        <Literal>
+          <ID>getModel</ID>
+          <ToolTip>Replace with the name of the function that retrieves the model</ToolTip>
+          <Default>getModel</Default>
+        </Literal>
+      </Declarations>  
+      <Code Language="csharp">
+      <![CDATA[public ActionResult $methodName$()
+        {
+            var model = $getModel$;
+            $end$
+            return View(model);
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
