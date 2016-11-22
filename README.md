@@ -1,11 +1,11 @@
 # Sniptaculous
 ### The most sniptacular C# snippet library for Visual Studio.
 
-Sniptaculous is a library of Visual Studio C# snippets which are meant to complement's Visual Studio's own snippets.
+Sniptaculous is a library of Visual Studio C# snippets which are meant to complement Visual Studio's own snippets.
 
 ## Installation
 
-Right now the snippets are distributed as a collection of files which need to be placed somewhere on your computer. Then in Visual Studio open the snippets manager (`Ctrl-K, Ctrl-B`) and Add the folder where Sniptaculous is stored. The update the snippets simply do a file copy.
+Right now the snippets are distributed as a collection of files which needs to be placed somewhere on your computer. In Visual Studio open the snippets manager (`Ctrl-K, Ctrl-B`) and Add the folder where Sniptaculous is stored. To update the snippets simply do a file copy.
 
 In the future Sniptaculous will probably be delivered in a more convenient fashion.
 
