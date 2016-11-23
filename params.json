@@ -1,0 +1,6 @@
+{
+  "name": "Sniptaculous",
+  "tagline": "The most sniptacular C# snippet library for Visual Studio.",
+  "body": "### What is it\r\nSniptaculous is a library of Visual Studio C# snippets which are meant to complement Visual Studio's own snippets. \r\n\r\n### Getting started\r\nRight now the snippets are distributed as a collection of files which needs to be placed somewhere on your computer. In Visual Studio open the snippets manager (Ctrl-K, Ctrl-B) and Add the folder where Sniptaculous is stored. \r\n\r\n### Usage\r\n Once the snippets are installed the will appear in Visual Studio. To use them type the snippet (which will appear in Intellisense) and the press tab twice.\r\n\r\nJust like the Visual Studio's snippets, certain snippets are parameterized. In this case the parameters will be highlighted. You can replace parameters by typing on a selected parameter and switch between parameters with tab. When all the parameters have been entered press enter. \r\n\r\n### More\r\nYou can find more information on Sniptaculous on our [GitHub page](https://github.com/gilles-leblanc/Sniptaculous). \r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
