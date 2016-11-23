@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Moq Setup Property</Title>
+      <Shortcut>msp</Shortcut>
+      <Description>Code snippet to setup a property.</Description>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Moq</Namespace>
+        </Import>
+      </Imports>   
+      <Declarations>
+        <Literal>
+          <ID>mocked</ID>
+          <ToolTip>Replace with the name of the mocked class</ToolTip>
+          <Default>mocked</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Replace with the name of the property to be setup</ToolTip>
+          <Default>property</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Replace with the name of the value to be returned by the property</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+      <![CDATA[$mocked$.Setup(mock => mock.$property$).Returns($value$);
+      $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

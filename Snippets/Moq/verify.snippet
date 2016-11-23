@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Moq Verify</Title>
+      <Shortcut>mv</Shortcut>
+      <Description>Code snippet to verify a mocked method call has been called.</Description>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Moq</Namespace>
+        </Import>
+      </Imports>   
+      <Declarations>
+        <Literal>
+          <ID>mocked</ID>
+          <ToolTip>Replace with the name of the mocked class</ToolTip>
+          <Default>mocked</Default>
+        </Literal>
+        <Literal>
+          <ID>method</ID>
+          <ToolTip>Replace with the name of the method to be verified</ToolTip>
+          <Default>method</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+      <![CDATA[$mocked$.Verify(mock => mock.$method$());
+      $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

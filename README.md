@@ -21,6 +21,7 @@ If a snippet requires a dll or a `using` statement it will import itself automat
 
 Here are the snippets:
 
+
 ### Exceptions
 
 | Shortcut    | Name                  |
@@ -48,6 +49,17 @@ Here are the snippets:
 | dtn           | DateTime.Now                      |
 
 
+### Moq
+
+| Shortcut    | Name                  |
+|-------------|-----------------------|
+| mnm           | Moq New Mock                      |
+| msp           | Moq Setup Property                      |
+| mv           | Moq Verify                      |
+| mvn           | Moq Verify Never                      |
+| mvo           | Moq Verify Once                      |
+
+
 ### MVC
 
 | Shortcut    | Name                  |
@@ -56,6 +68,8 @@ Here are the snippets:
 | agetm           | MVC Get Action                      |
 | agetma           | MVC Get Action Async                      |
 | apost           | MVC Post Action                      |
+| aposta           | MVC Post Action Async                      |
+| ara           | MVC Redirect To Action                      |
 | rv           | return View                      |
 | rvm           | return View                      |
 
