@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\WriteEmptyLineCommand.cs" />
+    <Compile Include="Commands\WriteHeaderCommand.cs" />
+    <Compile Include="Commands\WriteSnippetTableLineCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

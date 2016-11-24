@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SnippetsToMarkdown.Commands;
+using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
@@ -10,26 +12,29 @@ namespace SnippetsToMarkdown
     class Program
     {
         private static StringBuilder output;
+        private static List<ICommand> commands;
 
         static void Main(string[] args)
         {
             output = new StringBuilder();
+            commands = new List<ICommand>();
 
             string pathToSnippets = ConfigurationManager.AppSettings["pathToSnippets"];
             string currentDirectory = Environment.CurrentDirectory;
 
-            CollectSnippets(currentDirectory + pathToSnippets);
+            CollectSnippetsCommands(currentDirectory + pathToSnippets);
+            RunCommands();
             WriteOutput();
         }        
 
-        static void CollectSnippets(string pathToSnippets)
+        static void CollectSnippetsCommands(string pathToSnippets)
         {           
             try
             {
                 foreach (string directory in Directory.GetDirectories(pathToSnippets))
                 {
-                    WriteSnippetsTableForDirectory(directory);
-                    CollectSnippets(directory);
+                    CreateOutputCommandsForDirectory(directory);
+                    CollectSnippetsCommands(directory);
                 }
             }
             catch (Exception excpt)
@@ -38,46 +43,38 @@ namespace SnippetsToMarkdown
             }
         }
 
-        private static void WriteSnippetsTableForDirectory(string directory)
+        private static void CreateOutputCommandsForDirectory(string directory)
         {
-            WriteSnippetCategoryHeader(directory);
+            commands.Add(new WriteHeaderCommand(directory));
 
-            foreach (string file in Directory.GetFiles(directory, "*.snippet"))
+            var files = Directory.GetFiles(directory, "*.snippet");
+            files.Select(file =>
             {
-                WriteSnippetTableLine(file);
-            }
+                var xmlDocument = XDocument.Load(file);
+                var xns = xmlDocument.Root.Name.Namespace;
 
-            output.AppendLine();
+                return (from header in xmlDocument.Root.Descendants(xns + "Header")
+                        select new
+                        {
+                            Shortcut = header.Element(xns + "Shortcut").Value,
+                            Title = header.Element(xns + "Title").Value
+                        }).Single();
+            }).OrderBy(snippet => snippet.Shortcut)
+              .ToList()
+              .ForEach(snippet => commands.Add(new WriteSnippetTableLineCommand(snippet.Shortcut, snippet.Title)));
+
+            commands.Add(new WriteEmptyLineCommand());
         }
 
-        private static void WriteSnippetTableLine(string file)
+        private static void RunCommands()
         {
-            var xmlDocument = XDocument.Load(file);
-            var xns = xmlDocument.Root.Name.Namespace;
-
-            var snippet = (from header in xmlDocument.Root.Descendants(xns + "Header")
-                           select new
-                           {
-                               Shortcut = header.Element(xns +"Shortcut").Value,
-                               Title = header.Element(xns + "Title").Value
-                           }).Single();
-
-            output.AppendLine(string.Format("| {0}           | {1}                      |", snippet.Shortcut, snippet.Title));
-        }
-
-        private static void WriteSnippetCategoryHeader(string directory)
-        {
-            output.AppendLine();
-            output.AppendLine("### " + directory.Substring(directory.LastIndexOf('\\') + 1));
-            output.AppendLine();
-            output.AppendLine("| Shortcut    | Name                  |");
-            output.AppendLine("|-------------|-----------------------|");
+            commands.ForEach(command => command.WriteToOutput(output));
         }
 
         private static void WriteOutput()
         {
             string pathToOutputFile = ConfigurationManager.AppSettings["pathToOutputFile"];
             File.WriteAllText(pathToOutputFile, output.ToString());
-        }
+        }        
     }
 }
