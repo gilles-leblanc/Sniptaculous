@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>CreateMap</Title>
+      <Shortcut>amc</Shortcut>
+      <Description>Code snippet for Automapper CreateMap.</Description>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>AutoMapper</Namespace>
+        </Import>
+      </Imports>    
+      <Declarations>
+        <Literal>
+          <ID>SourceType</ID>
+          <ToolTip>Replace with the name of the source type</ToolTip>
+          <Default>SourceType</Default>
+        </Literal>
+        <Literal>
+          <ID>DestType</ID>
+          <ToolTip>Replace with the name of the destination type</ToolTip>
+          <Default>DestType</Default>
+        </Literal>
+      </Declarations>   
+      <Code Language="csharp">
+      <![CDATA[cfg.CreateMap<$SourceType$, $DestType$>();$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

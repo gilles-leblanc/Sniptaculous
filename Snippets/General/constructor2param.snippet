@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Constructor with 2 parameters</Title>
+      <Shortcut>ctor2p</Shortcut>
+      <Description>Code snippet to generate a constructor with 2 parameters and backing fields.</Description>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>classname</ID>
+          <ToolTip>Class name</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>ClassNamePlaceholder</Default>
+        </Literal>
+        <Literal>
+          <ID>firstParameter</ID>
+          <ToolTip>Replace with the name of the first parameter</ToolTip>
+          <Default>firstParameter</Default>
+        </Literal>
+        <Literal>
+          <ID>firstType</ID>
+          <ToolTip>Replace with the name of the first type</ToolTip>
+          <Default>firstType</Default>
+        </Literal>
+        <Literal>
+          <ID>secondParameter</ID>
+          <ToolTip>Replace with the name of the second parameter</ToolTip>
+          <Default>secondParameter</Default>
+        </Literal>
+        <Literal>
+          <ID>secondType</ID>
+          <ToolTip>Replace with the name of the second type</ToolTip>
+          <Default>secondType</Default>
+        </Literal>
+      </Declarations>      
+      <Code Language="csharp"><![CDATA[
+      private $firstType$ $firstParameter$;
+      private $secondType$ $secondParameter$;
+      
+      public $classname$ ($firstType$ $firstParameter$, $secondType$ $secondParameter$)
+	{
+        this.$firstParameter$ = $firstParameter$;
+        this.$secondParameter$ = $secondParameter$;$end$		
+	}]]>
+			</Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

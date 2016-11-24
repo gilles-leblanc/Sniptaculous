@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>ForMember</Title>
+      <Shortcut>amm</Shortcut>
+      <Description>Code snippet for Automapper ForMember.</Description>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>AutoMapper</Namespace>
+        </Import>
+      </Imports>    
+      <Declarations>
+        <Literal>
+          <ID>SourceMember</ID>
+          <ToolTip>Replace with the name of the source member</ToolTip>
+          <Default>SourceMember</Default>
+        </Literal>
+        <Literal>
+          <ID>DestMember</ID>
+          <ToolTip>Replace with the name of the destination member</ToolTip>
+          <Default>DestMember</Default>
+        </Literal>
+      </Declarations>   
+      <Code Language="csharp">
+      <![CDATA[.ForMember(dest => dest.$DestMember$, opt => opt.MapFrom(src => src.$SourceMember$));]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
