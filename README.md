@@ -22,31 +22,51 @@ If a snippet requires a dll or a `using` statement it will import itself automat
 Here are the snippets:
 
 
+
+### Automapper
+
+| Shortcut    | Name                  |
+|-------------|-----------------------|
+| amc           | CreateMap                      |
+| amm           | ForMember                      |
+| amp           | RecognizePrefixes                      |
+
+
 ### Exceptions
 
 | Shortcut    | Name                  |
 |-------------|-----------------------|
 | ea           | throw new ApplicationException                      |
-| eam           | throw new ApplicationException                      |
-| ear           | throw new ArgumentException                      |
-| earm           | throw new ArgumentException                      |
+| eam           | throw new ApplicationException with a message                      |
 | ean           | throw new ArgumentNullException                      |
-| eanm           | throw new ArgumentNullException                      |
+| eanm           | throw new ArgumentNullException with a message                      |
 | eao           | throw new ArgumentOutOfRangeException                      |
-| eaom           | throw new ArgumentOutOfRangeException                      |
+| eaom           | throw new ArgumentOutOfRangeException with a message                      |
+| ear           | throw new ArgumentException                      |
+| earm           | throw new ArgumentException with a message                      |
 | ee           | throw new Exception                      |
-| eem           | throw new Exception                      |
+| eem           | throw new Exception with a message                      |
 | eio           | throw new InvalidOperationException                      |
-| eiom           | throw new InvalidOperationException                      |
+| eiom           | throw new InvalidOperationException with a message                      |
 | eni           | throw new NotImplementedException                      |
-| enim           | throw new NotImplementedException                      |
+| enim           | throw new NotImplementedException with a message                      |
 
 
 ### General
 
 | Shortcut    | Name                  |
 |-------------|-----------------------|
+| ctor1p           | Constructor with 1 parameter                      |
+| ctor2p           | Constructor with 2 parameters                      |
+| ctor3p           | Constructor with 3 parameters                      |
+| ctor4p           | Constructor with 4 parameters                      |
 | dtn           | DateTime.Now                      |
+| propb           | bool Property                      |
+| propdb           | double Property                      |
+| propdc           | decimal Property                      |
+| propdt           | DateTime Property                      |
+| propi           | int Property                      |
+| props           | string Property                      |
 
 
 ### Moq
@@ -65,13 +85,13 @@ Here are the snippets:
 | Shortcut    | Name                  |
 |-------------|-----------------------|
 | aget           | MVC Get Action                      |
-| agetm           | MVC Get Action                      |
-| agetma           | MVC Get Action Async                      |
+| agetm           | MVC Get Action with model                      |
+| agetma           | MVC Get Action with model Async                      |
 | apost           | MVC Post Action                      |
 | aposta           | MVC Post Action Async                      |
 | ara           | MVC Redirect To Action                      |
 | rv           | return View                      |
-| rvm           | return View                      |
+| rvm           | return View with model                      |
 
 
 ### Tests
@@ -80,18 +100,20 @@ Here are the snippets:
 |-------------|-----------------------|
 | aaa           | AAA comments                      |
 | ae           | Assert.AreEqual                      |
+| af           | Assert.IsFalse                      |
 | afl           | Assert.Fail                      |
 | ainc           | Assert.Inconclusive                      |
-| af           | Assert.IsFalse                      |
-| ann           | Assert.IsNotNull                      |
 | an           | Assert.IsNull                      |
-| at           | Assert.IsTrue                      |
 | ane           | Assert.AreNotEqual                      |
+| ann           | Assert.IsNotNull                      |
+| at           | Assert.IsTrue                      |
 | cc           | Class Cleanup                      |
 | ci           | Class Initialize                      |
-| testa           | Test Method AAA                      |
 | tc           | Test Cleanup                      |
+| testa           | Test Method AAA                      |
 | ti           | Test Initialize                      |
+
+
 
 
 ## Name
