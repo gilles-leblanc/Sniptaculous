@@ -5,9 +5,7 @@ Sniptaculous is a library of Visual Studio C# snippets which are meant to comple
 
 ## Installation
 
-Right now the snippets are distributed as a collection of files which needs to be placed somewhere on your computer. In Visual Studio open the snippets manager (`Ctrl-K, Ctrl-B`) and Add the folder where Sniptaculous is stored. To update the snippets simply do a file copy.
-
-In the future Sniptaculous will probably be delivered in a more convenient fashion.
+The snippets are distributed as a zip file, [Sniptaculous](https://github.com/gilles-leblanc/Sniptaculous/blob/master/Sniptaculous.zip), which needs to be placed somewhere on your computer. In Visual Studio open the snippets manager (`Ctrl-K, Ctrl-B`) and Add the folder where Sniptaculous is stored. To update the snippets simply do a file copy.
 
 ## Usage
 
