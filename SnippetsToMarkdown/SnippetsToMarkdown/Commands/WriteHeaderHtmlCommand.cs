@@ -13,7 +13,7 @@ namespace SnippetsToMarkdown.Commands
 
         public void WriteToOutput(StringBuilder output)
         {
-            output.AppendLine("<h3>" + directory.Substring(directory.LastIndexOf('\\') + 1) + "</h3>");
+            output.AppendLine("<h4>" + directory.Substring(directory.LastIndexOf('\\') + 1) + "</h4>");
             output.AppendLine("<br />");
             output.AppendLine("<table>");
 
