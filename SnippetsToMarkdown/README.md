@@ -1,6 +1,6 @@
 # SnippetsToMarkdown
 
-This is a C# .Net 4.6 console app that scans a folder for .snippet files and generated some markdown tables to form a sort of cheat sheet on the snippet's usage.
+This is a C# .Net 4.6 console app that scans a folder for .snippet files and generates some markdown output.  This output constitute a sort of cheat sheet on the snippet's usage.
 
 Here is an example output:
 
