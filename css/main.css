@@ -45,6 +45,6 @@
   padding-top: 1.3em;
 }
 
-thead {
+thead tr td {
   font-weight: bold;
 }
