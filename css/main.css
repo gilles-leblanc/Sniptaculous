@@ -44,3 +44,7 @@
   background-color: rgb(50, 50, 50);
   padding-top: 1.3em;
 }
+
+thead {
+  font-weight: bold;
+}
