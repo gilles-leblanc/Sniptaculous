@@ -2,7 +2,7 @@
 
 namespace SnippetsToMarkdown.Commands
 {
-    class WriteEmptyLineCommand : ICommand
+    class WriteFooterMdCommand : ICommand
     {
         public void WriteToOutput(StringBuilder output)
         {

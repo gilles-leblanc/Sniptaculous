@@ -1,30 +1,24 @@
-﻿using SnippetsToMarkdown.Commands;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Xml.Linq;
 
 namespace SnippetsToMarkdown
 {
     class Program
     {
-        private static StringBuilder output;
-        private static List<ICommand> commands;
+        private static OutputManager outputManager;
 
         static void Main(string[] args)
         {
-            output = new StringBuilder();
-            commands = new List<ICommand>();
-
+            outputManager = new OutputManager();
+            
             string pathToSnippets = ConfigurationManager.AppSettings["pathToSnippets"];
             string currentDirectory = Environment.CurrentDirectory;
 
             CollectSnippetsCommands(currentDirectory + pathToSnippets);
-            RunCommands();
-            WriteOutput();
+            outputManager.WriteOutput();
         }        
 
         static void CollectSnippetsCommands(string pathToSnippets)
@@ -45,7 +39,7 @@ namespace SnippetsToMarkdown
 
         private static void CreateOutputCommandsForDirectory(string directory)
         {
-            commands.Add(new WriteHeaderCommand(directory));
+            outputManager.AddWriteHeaderCommand(directory);            
 
             var files = Directory.GetFiles(directory, "*.snippet");
             files.Select(file =>
@@ -61,20 +55,9 @@ namespace SnippetsToMarkdown
                         }).Single();
             }).OrderBy(snippet => snippet.Shortcut)
               .ToList()
-              .ForEach(snippet => commands.Add(new WriteSnippetTableLineCommand(snippet.Shortcut, snippet.Title)));
+              .ForEach(snippet => outputManager.AddTableLineCommand(snippet.Shortcut, snippet.Title));
 
-            commands.Add(new WriteEmptyLineCommand());
+            outputManager.AddFooterCommand();
         }
-
-        private static void RunCommands()
-        {
-            commands.ForEach(command => command.WriteToOutput(output));
-        }
-
-        private static void WriteOutput()
-        {
-            string pathToOutputFile = ConfigurationManager.AppSettings["pathToOutputFile"];
-            File.WriteAllText(pathToOutputFile, output.ToString());
-        }        
     }
 }

@@ -44,10 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builders\HtmlBuilder.cs" />
+    <Compile Include="Builders\IBuilder.cs" />
+    <Compile Include="Builders\MarkdownBuilder.cs" />
     <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="Commands\WriteEmptyLineCommand.cs" />
-    <Compile Include="Commands\WriteHeaderCommand.cs" />
-    <Compile Include="Commands\WriteSnippetTableLineCommand.cs" />
+    <Compile Include="Commands\WriteFooterHtmlCommand.cs" />
+    <Compile Include="Commands\WriteFooterMdCommand.cs" />
+    <Compile Include="Commands\WriteHeaderHtmlCommand.cs" />
+    <Compile Include="Commands\WriteHeaderMdCommand.cs" />
+    <Compile Include="Commands\WriteTableLineHtmlCommand.cs" />
+    <Compile Include="Commands\WriteTableLineMdCommand.cs" />
+    <Compile Include="OutputManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

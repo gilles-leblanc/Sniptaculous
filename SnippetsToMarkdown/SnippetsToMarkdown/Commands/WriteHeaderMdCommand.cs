@@ -2,11 +2,11 @@
 
 namespace SnippetsToMarkdown.Commands
 {
-    class WriteHeaderCommand : ICommand
+    class WriteHeaderMdCommand : ICommand
     {
         private string directory;
 
-        public WriteHeaderCommand(string directory)
+        public WriteHeaderMdCommand(string directory)
         {
             this.directory = directory;
         }            

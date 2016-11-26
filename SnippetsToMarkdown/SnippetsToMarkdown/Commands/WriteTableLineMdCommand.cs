@@ -2,11 +2,11 @@
 
 namespace SnippetsToMarkdown.Commands
 {
-    class WriteSnippetTableLineCommand : ICommand
+    class WriteTableLineMdCommand : ICommand
     {
         private string shortcut, title;
 
-        public WriteSnippetTableLineCommand(string shortcut, string title)
+        public WriteTableLineMdCommand(string shortcut, string title)
         {
             this.shortcut = shortcut;
             this.title = title;
