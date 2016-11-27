@@ -19,8 +19,8 @@ namespace SnippetsToMarkdown.Commands
 
             output.AppendLine("<thead>");
             output.AppendLine("<tr>");
-            output.AppendLine("<td>Shortcut</td>");
-            output.AppendLine("<td>Name</td>");
+            output.AppendLine("<th>Shortcut</th>");
+            output.AppendLine("<th>Name</th>");
             output.AppendLine("</tr>");
             output.AppendLine("</thead>");
 
