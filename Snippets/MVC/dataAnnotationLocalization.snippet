@@ -6,39 +6,34 @@
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Title>MVC Get Action with model</Title>
-      <Shortcut>getm</Shortcut>
+      <Shortcut>dal</Shortcut>
       <Description>Code snippet for an HttpGet action with model.</Description>
     </Header>
     <Snippet>
       <Imports>
         <Import>
-          <Namespace>System.Web.Mvc</Namespace>
+          <Namespace>System.ComponentModel.DataAnnotations</Namespace>
         </Import>
       </Imports>
       <References>
         <Reference>
-          <Assembly>System.Web.Mvc.dll</Assembly>
+          <Assembly>System.ComponentModel.DataAnnotations.dll</Assembly>
         </Reference>
       </References>    
       <Declarations>
         <Literal>
-          <ID>methodName</ID>
-          <ToolTip>Replace with the name of the action</ToolTip>
-          <Default>methodName</Default>
+          <ID>resourceType</ID>
+          <ToolTip>Replace with the name of the resource type</ToolTip>
+          <Default>resourceType</Default>
         </Literal>
         <Literal>
-          <ID>getModel</ID>
-          <ToolTip>Replace with the name of the function that retrieves the model</ToolTip>
-          <Default>getModel</Default>
+          <ID>resourceName</ID>
+          <ToolTip>Replace with the name of the resource item</ToolTip>
+          <Default>resourceName</Default>
         </Literal>
       </Declarations>  
       <Code Language="csharp">
-      <![CDATA[public ActionResult $methodName$()
-        {
-            var model = $getModel$;
-            $end$
-            return View(model);
-        }]]>
+      <![CDATA[[Display(ResourceType = typeof($resourceType$), Name = "$resourceName$")]$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>

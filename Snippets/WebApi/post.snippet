@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>WebApi Post Action</Title>
+      <Shortcut>wap</Shortcut>
+      <Description>Code snippet for an HttpPost action.</Description>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Net.Http</Namespace>          
+        </Import>
+        <Import>
+          <Namespace>System.Web.Http</Namespace>          
+        </Import>        
+      </Imports>
+      <References>
+        <Reference>          
+          <Assembly>System.Web.Http.dll</Assembly>
+        </Reference>
+        <Reference>          
+          <Assembly>System.Net.Http.dll</Assembly>
+        </Reference>        
+      </References>    
+      <Declarations>
+        <Literal>
+          <ID>ActionName</ID>
+          <ToolTip>Replace with the name of the action</ToolTip>
+          <Default>ActionName</Default>
+        </Literal>
+        <Literal>
+          <ID>ModelType</ID>
+          <ToolTip>Replace with the name of the model type</ToolTip>
+          <Default>ModelType</Default>
+        </Literal>
+        <Literal>
+          <ID>modelName</ID>
+          <ToolTip>Replace with the name of the model instance</ToolTip>
+          <Default>modelName</Default>
+        </Literal>
+      </Declarations>  
+      <Code Language="csharp">
+      <![CDATA[
+        [HttpPost]
+public HttpResponseMessage $ActionName$($ModelType$ $modelName$)
+{
+    $end$
+    return new HttpResponseMessage(HttpStatusCode.OK);
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

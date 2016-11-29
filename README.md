@@ -82,12 +82,14 @@ Here are the snippets:
 
 | Shortcut    | Name                  |
 |-------------|-----------------------|
-| aget           | MVC Get Action                      |
-| agetm           | MVC Get Action with model                      |
-| agetma           | MVC Get Action with model Async                      |
-| apost           | MVC Post Action                      |
-| aposta           | MVC Post Action Async                      |
+| agetm           | MVC Get Action with model Async                      |
+| apostm           | MVC Post Action Async with model                      |
 | ara           | MVC Redirect To Action                      |
+| dal           | MVC Get Action with model                      |
+| get           | MVC Get Action                      |
+| getm           | MVC Get Action with model                      |
+| post           | MVC Post Action                      |
+| postm           | MVC Post Action with model                      |
 | rv           | return View                      |
 | rvm           | return View with model                      |
 
@@ -110,6 +112,14 @@ Here are the snippets:
 | tc           | Test Cleanup                      |
 | testa           | Test Method AAA                      |
 | ti           | Test Initialize                      |
+
+
+### WebApi
+
+| Shortcut    | Name                  |
+|-------------|-----------------------|
+| wap           | WebApi Post Action                      |
+
 
 
 

@@ -6,7 +6,7 @@
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Title>MVC Post Action</Title>
-      <Shortcut>apost</Shortcut>
+      <Shortcut>post</Shortcut>
       <Description>Code snippet for an HttpPost action.</Description>
     </Header>
     <Snippet>
@@ -26,16 +26,11 @@
           <ToolTip>Replace with the name of the action</ToolTip>
           <Default>methodName</Default>
         </Literal>
-        <Literal>
-          <ID>modelType</ID>
-          <ToolTip>Replace with the type of the model that is passed to the action</ToolTip>
-          <Default>ModelType</Default>
-        </Literal>
       </Declarations>  
       <Code Language="csharp">
       <![CDATA[
       [HttpPost]
-        public ActionResult $methodName$($modelType$ model)
+        public ActionResult $methodName$()
         {
             $end$
             return RedirectToAction("Index");

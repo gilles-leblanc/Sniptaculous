@@ -5,17 +5,14 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>MVC Post Action Async with model</Title>
-      <Shortcut>apostm</Shortcut>
-      <Description>Code snippet for an async HttpPost action with model.</Description>
+      <Title>MVC Post Action with model</Title>
+      <Shortcut>postm</Shortcut>
+      <Description>Code snippet for an HttpPost action with model.</Description>
     </Header>
     <Snippet>
       <Imports>
         <Import>
           <Namespace>System.Web.Mvc</Namespace>
-        </Import>
-        <Import>
-          <Namespace>System.Threading.Tasks</Namespace>
         </Import>
       </Imports>
       <References>
@@ -34,18 +31,12 @@
           <ToolTip>Replace with the type of the model that is passed to the action</ToolTip>
           <Default>ModelType</Default>
         </Literal>
-        <Literal>
-          <ID>serviceCall</ID>
-          <ToolTip>Replace with the async service call to post the data.</ToolTip>
-          <Default>serviceCall</Default>
-        </Literal>
       </Declarations>  
       <Code Language="csharp">
       <![CDATA[
       [HttpPost]
-        public async Task<ActionResult> $methodName$($modelType$ model)
+        public ActionResult $methodName$($modelType$ model)
         {
-            var result = await $serviceCall$;
             $end$
             return RedirectToAction("Index");
         }]]>
