@@ -71,11 +71,11 @@ Here are the snippets:
 
 | Shortcut    | Name                  |
 |-------------|-----------------------|
-| mnm           | Moq New Mock                      |
-| msp           | Moq Setup Property                      |
-| mv           | Moq Verify                      |
-| mvn           | Moq Verify Never                      |
-| mvo           | Moq Verify Once                      |
+| mnm           | New Mock                      |
+| msp           | Setup Property                      |
+| mv           | Verify                      |
+| mvn           | Verify Never                      |
+| mvo           | Verify Once                      |
 
 
 ### MVC
@@ -83,9 +83,9 @@ Here are the snippets:
 | Shortcut    | Name                  |
 |-------------|-----------------------|
 | agetm           | MVC Get Action with model Async                      |
-| apostm           | MVC Post Action Async with model                      |
+| apostm           | MVC Post Action with model Async                      |
 | ara           | MVC Redirect To Action                      |
-| dal           | MVC Get Action with model                      |
+| dal           | Data Annotation for Localized display value                      |
 | get           | MVC Get Action                      |
 | getm           | MVC Get Action with model                      |
 | post           | MVC Post Action                      |
@@ -119,7 +119,6 @@ Here are the snippets:
 | Shortcut    | Name                  |
 |-------------|-----------------------|
 | wap           | WebApi Post Action                      |
-
 
 
 
