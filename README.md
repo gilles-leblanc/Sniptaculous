@@ -21,6 +21,7 @@ Here are the snippets:
 
 
 
+
 ### Automapper
 
 | Shortcut    | Name                  |
@@ -64,6 +65,7 @@ Here are the snippets:
 | propdc           | decimal Property                      |
 | propdt           | DateTime Property                      |
 | propi           | int Property                      |
+| propid           | int Id Property                      |
 | props           | string Property                      |
 
 
@@ -119,6 +121,8 @@ Here are the snippets:
 | Shortcut    | Name                  |
 |-------------|-----------------------|
 | wap           | WebApi Post Action                      |
+
+
 
 
 
