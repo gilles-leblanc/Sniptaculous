@@ -22,6 +22,7 @@ Here are the snippets:
 
 
 
+
 ### Automapper
 
 | Shortcut    | Name                  |
@@ -60,6 +61,7 @@ Here are the snippets:
 | ctor3p           | Constructor with 3 parameters                      |
 | ctor4p           | Constructor with 4 parameters                      |
 | dtn           | DateTime.Now                      |
+| pcl           | public class                      |
 | propb           | bool Property                      |
 | propdb           | double Property                      |
 | propdc           | decimal Property                      |
@@ -121,6 +123,8 @@ Here are the snippets:
 | Shortcut    | Name                  |
 |-------------|-----------------------|
 | wap           | WebApi Post Action                      |
+
+
 
 
 
