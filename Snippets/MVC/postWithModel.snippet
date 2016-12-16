@@ -35,8 +35,14 @@
       <Code Language="csharp">
       <![CDATA[
       [HttpPost]
+      [ValidateAntiForgeryToken]
         public ActionResult $methodName$($modelType$ model)
         {
+            if (!ModelState.IsValid)
+            {
+              return View();
+            }
+
             $end$
             return RedirectToAction("Index");
         }]]>
