@@ -22,7 +22,6 @@ Here are the snippets:
 
 
 
-
 ### Automapper
 
 | Shortcut    | Name                  |
@@ -68,6 +67,7 @@ Here are the snippets:
 | propdt           | DateTime Property                      |
 | propi           | int Property                      |
 | propid           | int Id Property                      |
+| propls           | List Property                      |
 | props           | string Property                      |
 
 
@@ -90,6 +90,7 @@ Here are the snippets:
 | apostm           | MVC Post Action with model Async                      |
 | ara           | MVC Redirect To Action                      |
 | dal           | Data Annotation for Localized display value                      |
+| das           | Data Annotation for String Length constraint                      |
 | get           | MVC Get Action                      |
 | getm           | MVC Get Action with model                      |
 | post           | MVC Post Action                      |
@@ -123,10 +124,6 @@ Here are the snippets:
 | Shortcut    | Name                  |
 |-------------|-----------------------|
 | wap           | WebApi Post Action                      |
-
-
-
-
 
 
 

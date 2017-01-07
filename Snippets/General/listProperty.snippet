@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>List Property</Title>
+      <Shortcut>propls</Shortcut>
+      <Description>Code snippet for a List generic property.</Description>
+    </Header>
+    <Snippet>   
+    <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports> 
+      <Declarations>
+        <Literal>
+          <ID>MyProperty</ID>
+          <ToolTip>Replace with the name of the property</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>T</ID>
+          <ToolTip>Replace with the type of the list.</ToolTip>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>       
+      <Code Language="csharp">
+      <![CDATA[public List<$T$> $MyProperty$ { get; set; }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
