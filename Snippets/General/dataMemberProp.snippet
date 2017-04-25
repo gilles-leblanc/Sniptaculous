@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>DataMember Attribute</Title>
+      <Shortcut>dm</Shortcut>
+      <Description>Code snippet for adding a [DataMember] attribute.</Description>
+    </Header>
+    <Snippet>   
+      <Imports>
+        <Import>
+          <Namespace>System.Runtime.Serialization</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>System.Runtime.Serialization.dll</Assembly>
+        </Reference>
+      </References>  
+      <Code Language="csharp">
+      <![CDATA[[DataMember]$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
