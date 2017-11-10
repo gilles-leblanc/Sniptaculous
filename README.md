@@ -70,6 +70,7 @@ Here are the snippets:
 | propid           | int Id Property                      |
 | propls           | List Property                      |
 | props           | string Property                      |
+| snw           | string IsNullOrWhiteSpace                      |
 
 
 ### Moq
