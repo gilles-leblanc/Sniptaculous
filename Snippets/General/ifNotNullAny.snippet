@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>if (value != null and value.any) {}</Title>
+      <Shortcut>ifany</Shortcut>
+      <Description>Code snippet for checking null value and adding a conditional block.</Description>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Linq</Namespace>
+        </Import>
+      </Imports>   
+      <Declarations>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Replace with the name of the value to check</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>       
+      <Code Language="csharp">
+      <![CDATA[if ($value$ != null && $value$.Any())
+      { 
+        $end$
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
