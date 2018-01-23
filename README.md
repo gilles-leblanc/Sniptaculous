@@ -15,10 +15,6 @@ Just like the Visual Studio's snippets, certain snippets are parameterized. In t
 
 If a snippet requires a dll or a `using` statement it will import itself automatically when the snippet is expended.
 
-## Version
-
-Version 1.01
-
 ## Cheat Sheet
 
 Here are the snippets:
@@ -136,6 +132,10 @@ Here are the snippets:
 
 
 
+
+## Version
+
+Version 1.01
 
 ## Name
 
