@@ -59,8 +59,11 @@ Here are the snippets:
 | ctor2p           | Constructor with 2 parameters                      |
 | ctor3p           | Constructor with 3 parameters                      |
 | ctor4p           | Constructor with 4 parameters                      |
+| dc           | DataContract Attribute                      |
 | dm           | DataMember Attribute                      |
 | dtn           | DateTime.Now                      |
+| ifany           | if (value != null and value.any) {}                      |
+| ifnn           | if (value != null) {}                      |
 | pcl           | public class                      |
 | propb           | bool Property                      |
 | propdb           | double Property                      |
