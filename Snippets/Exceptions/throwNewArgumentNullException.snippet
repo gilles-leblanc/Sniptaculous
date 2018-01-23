@@ -20,8 +20,15 @@
           <Assembly>System.dll</Assembly>
         </Reference>
       </References>       
+      <declarations>
+        <Literal>
+          <ID>param</ID>
+          <ToolTip>Replace with the name of the parameter</ToolTip>
+          <Default>param</Default>
+        </Literal>
+      </declarations>
       <Code Language="csharp">
-      <![CDATA[throw new ArgumentNullException();$end$]]>
+      <![CDATA[throw new ArgumentNullException(nameof($param$));$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>

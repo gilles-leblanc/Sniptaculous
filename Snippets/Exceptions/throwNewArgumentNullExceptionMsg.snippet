@@ -25,10 +25,15 @@
           <ID>param</ID>
           <ToolTip>Replace with the name of the parameter</ToolTip>
           <Default>param</Default>
+        </Literal>        
+        <Literal>
+          <ID>message</ID>
+          <ToolTip>Replace with the exception message</ToolTip>
+          <Default>message</Default>
         </Literal>
       </Declarations>       
       <Code Language="csharp">
-      <![CDATA[throw new ArgumentNullException("$param$");$end$]]>
+      <![CDATA[throw new ArgumentNullException(nameof($param$), "$message$");$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>

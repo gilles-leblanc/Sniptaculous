@@ -19,9 +19,16 @@
         <Reference>
           <Assembly>System.dll</Assembly>
         </Reference>
-      </References>       
+      </References>
+      <declarations>
+        <Literal>
+          <ID>param</ID>
+          <ToolTip>Replace with the name of the parameter</ToolTip>
+          <Default>param</Default>
+        </Literal>
+      </declarations>       
       <Code Language="csharp">
-      <![CDATA[throw new ArgumentOutOfRangeException();$end$]]>
+      <![CDATA[throw new ArgumentOutOfRangeException(nameof($param$));$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>

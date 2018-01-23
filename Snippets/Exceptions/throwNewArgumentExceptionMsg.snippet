@@ -27,8 +27,8 @@
           <Default>message</Default>
         </Literal>
       </Declarations>          
-      <Code Language="csharp">
-      <![CDATA[throw new ArgumentException("$message$");$end$]]>
+      <Code Language="csharp" Delimiter="~">
+      <![CDATA[throw new ArgumentException($"~message~");~end~]]>
       </Code>
     </Snippet>
   </CodeSnippet>
