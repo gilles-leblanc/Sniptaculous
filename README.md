@@ -135,7 +135,7 @@ Here are the snippets:
 
 ## Version
 
-Version 1.01
+Version 1.2
 
 ## Name
 
